@@ -1,0 +1,18 @@
+POST http://localhost:3000/add-new-post
+Content-Type: application/json
+
+{
+    "Name": "Priya",
+    "RegNo": 201900560,
+    "Marks": 47
+}
+const mongoose = require('mongoose')
+const {Schema} = mongoose
+
+const dataSchema = new Schema({
+    Name: String,
+    RegNo: Number,
+    Marks: Number
+});
+
+module.exports = mongoose.model('data', dataSchema, 'dataSchema');
