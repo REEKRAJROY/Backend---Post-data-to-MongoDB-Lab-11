@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 const schema = require('./schema')
-const url = "mongodb+srv://Reekraj:12345@cluster0.pdofy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const url = "mongodb+srv://test:test@cluster0.pdofy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongoose.connect(url).then(()=>console.log("Connected to DB"))
 app.use(express.json())
 app.post('/add-new-post', async (req,res)=>{
